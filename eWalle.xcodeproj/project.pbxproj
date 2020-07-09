@@ -13,6 +13,7 @@
 		F2135DFE24B28566006037D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2135DFD24B28566006037D5 /* Assets.xcassets */; };
 		F2135E0124B28566006037D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2135E0024B28566006037D5 /* Preview Assets.xcassets */; };
 		F2135E0424B28566006037D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2135E0224B28566006037D5 /* LaunchScreen.storyboard */; };
+		F218A38224B3F3540024036A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218A38124B3F3540024036A /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F2135E0024B28566006037D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2135E0324B28566006037D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2135E0524B28566006037D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F218A38124B3F3540024036A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,11 @@
 		F2135DF624B28561006037D5 /* eWalle */ = {
 			isa = PBXGroup;
 			children = (
+				F264A19324B7C44600497E99 /* Git */,
 				F2135DF724B28561006037D5 /* AppDelegate.swift */,
 				F2135DF924B28561006037D5 /* SceneDelegate.swift */,
 				F2135DFB24B28561006037D5 /* ContentView.swift */,
+				F218A38124B3F3540024036A /* HomeScreen.swift */,
 				F2135DFD24B28566006037D5 /* Assets.xcassets */,
 				F2135E0224B28566006037D5 /* LaunchScreen.storyboard */,
 				F2135E0524B28566006037D5 /* Info.plist */,
@@ -73,6 +77,13 @@
 				F2135E0024B28566006037D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F264A19324B7C44600497E99 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Git;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F218A38224B3F3540024036A /* HomeScreen.swift in Sources */,
 				F2135DF824B28561006037D5 /* AppDelegate.swift in Sources */,
 				F2135DFA24B28561006037D5 /* SceneDelegate.swift in Sources */,
 				F2135DFC24B28561006037D5 /* ContentView.swift in Sources */,

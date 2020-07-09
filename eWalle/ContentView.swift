@@ -9,76 +9,83 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var segueToHome: Bool = false
+        
     var body: some View {
         ZStack {
+            
+            HStack {
+                Image("artwork")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200, alignment: .leading)
+                    .frame(maxHeight: .infinity)
+                Spacer()
+            }
+            .edgesIgnoringSafeArea(.all)
+                       
+            HStack {
+                Spacer()
                 HStack {
-                    Image("artwork")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxHeight: .infinity)
+                    VStack(alignment: .leading, spacing: 20) {
+                        HStack {
+                            Image("logo")
+                            Spacer()
+                        }
+                        
+                        Text("eWalle")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        Text("Open An Account For Digital E-Wallet Solutions.Instant Payouts")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color(#colorLiteral(red: 0.4922940422, green: 0.4922940422, blue: 0.4922940422, alpha: 1)))
+                            .multilineTextAlignment(.leading)
+                        
+                        Text("Join for free")
+                            .foregroundColor(Color(#colorLiteral(red: 0.4922940422, green: 0.4922940422, blue: 0.4922940422, alpha: 1)))
+                    }
+                    .frame(width: 248)
+                    .padding(.trailing, 10)
+                    .padding(.leading, 160)
                     Spacer()
                 }
-                .edgesIgnoringSafeArea(.all)
+            }
+            
+            
+            HStack {
+                VStack(alignment: .leading, spacing: 20) {
+                    Spacer()
+                               
+                    Button(action: {self.segueToHome.toggle()}) {
+                        Text("Sign In")
+                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                        Image(systemName: "arrow.right")
+                            .renderingMode(.original)
+                    }
+                    .frame(width: 230, height: 55, alignment: .center)
+                    .background(Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
+                    .cornerRadius(10)
 
+                    
+                    
+                    Button(action: {}) {
+                    Text("Create an account")
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                    }
+                    .frame(width: 250, height: 50, alignment: .center)
+                }
+            }
+            .frame(width: 300, height: 800, alignment: .leading)
+            .offset(x: 99)
             
             VStack {
-                VStack() {
-                    HStack {
-                        Spacer()
-                        Text("06:20 PM")
-                            .font(.system(size: 34))
-                            .fontWeight(.regular)
-                        
-                        Image("Vector")
-                         
-                        Text("34 ºC")
-                    }
-                    Text("Nov. 10. 2020")
-                        .frame(width: 165, alignment: .trailing)
-                    
-                }
-                .frame(width: 400, height: 100, alignment: .trailing)
-                Spacer()
+                HomeScreen()
+                .background(Color.white)
             }
-            
-            HStack() {
-                Spacer()
-                VStack(alignment: .leading, spacing: 20) {
-                    Image("logo")
-                    Text("eWalle")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text ("Open An Account For Digital E-Wallet Solutions.Instant Payouts.")
-                    Text("Join For Free.")
-                }
-                .frame(width: 257, height: 200, alignment: .trailing)
-            }
-            
-            HStack(){
-                Spacer()
-                VStack(spacing: 20) {
-
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Text("Sign In")
-                            .foregroundColor(.black)
-                        Image(systemName: "arrow.right")
-                            .foregroundColor(.black)
-                        }
-                        .frame(width: 250, height: 50, alignment: .center)
-                        .background(Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
-                        .cornerRadius(10)
-
-
-                    
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Create an Account")
-                        .foregroundColor(.black)
-                    }
-                }
-                .frame(width: 257, height: 200, alignment: .leading)
-            }
-            .offset(x: 0, y: 250)
-            
+            .offset(x: self.segueToHome ? 0 : 600)
+            .animation(.linear)
         }
     }
 }
