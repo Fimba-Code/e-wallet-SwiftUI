@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/Fimba-Code/e-wallet-Swift/blob/master/Figma/other-assets/ezgif.com-video-to-gif.gif" />
+  <img src="https://github.com/Fimba-Code/e-wallet-SwiftUI/blob/master/Figma/other-assets/ezgif.com-video-to-gif.gif" />
 </p>
 
 ## 🚀 Tech
